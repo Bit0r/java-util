@@ -1,0 +1,123 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.jxcc</groupId>
+  <artifactId>java-util</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Archetype - java-util</name>
+  <url>http://maven.apache.org</url>
+
+  <!-- 推荐：设置属性 -->
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <easyexcel.version>3.3.4</easyexcel.version>
+  </properties>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.3.5</version> <!-- ← 指定 Spring Boot 版本即可 -->
+    <relativePath/>
+  </parent>
+  <dependencies>
+    <!-- 1. Hutool 工具类（CollUtil, ObjectUtil 等） -->
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-all</artifactId>
+      <version>5.8.25</version> <!-- 推荐使用最新版 -->
+    </dependency>
+
+    <!-- 2. Fastjson（JSON 处理） -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>2.0.43</version> <!-- 注意：fastjson 2.x 是新架构 -->
+    </dependency>
+
+    <!-- 3. MyBatis-Plus（TableInfoHelper） -->
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-core</artifactId>
+      <version>3.5.6</version> <!-- 或使用 mybatis-plus-boot-starter 如果是 Spring Boot 项目 -->
+    </dependency>
+
+    <!-- 4. Apache Commons BeanUtils（PropertyUtils） -->
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.4</version>
+    </dependency>
+
+    <!-- 5. SLF4J API（LoggerFactory） -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.12</version>
+    </dependency>
+
+    <!-- 6. JSR-303 / Jakarta Validation API（@NotNull） -->
+    <!-- 如果你用的是 Java EE / Jakarta EE -->
+    <dependency>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>jakarta.validation-api</artifactId>
+      <version>3.0.2</version> <!-- Jakarta Validation 3.0 (for Java 17+) -->
+    </dependency>
+    <!--
+        或者如果你还在用老版 javax.validation（Java 8~11 常见）：
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+    -->
+
+    <!-- 可选：提供日志实现，例如 Logback -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.14</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>2.0.1.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>easyexcel</artifactId>
+      <version>3.3.4</version> <!-- 推荐最新稳定版 -->
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope> <!-- Web 容器（如 Tomcat）会提供，不打包进 jar -->
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>5.3.3</version> <!-- 推荐使用最新稳定版 -->
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.14.0</version> <!-- 最新稳定版 -->
+    </dependency>
+  </dependencies>
+
+</project>
